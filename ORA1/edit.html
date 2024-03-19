@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chỉnh sửa thông tin sinh viên</title>
+    <style>
+        input[type="text"] {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chỉnh sửa thông tin sinh viên</h1>
+    <form>
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="id">MSSV:</label>
+        <input type="text" id="id" name="id"><br><br>
+        <label for="age">Năm vào trường:</label>
+        <input type="text" id="age" name="age"><br><br>
+        <label for="education">Bậc đào tạo:</label>
+        <input type="text" id="education" name="education"><br><br>
+        <label for="program">Chương trình:</label>
+        <input type="text" id="program" name="program"><br><br>
+        <label for="faculty">Khoa/viện quản lý:</label>
+        <input type="text" id="faculty" name="faculty"><br><br>
+        <label for="status">Tình trạng học tập:</label>
+        <input type="text" id="status" name="status"><br><br>
+        <label for="gender">Giới tính:</label>
+        <input type="text" id="gender" name="gender"><br><br>
+        <label for="class">Lớp:</label>
+        <input type="text" id="class" name="class"><br><br>
+        <label for="course">Khóa học:</label>
+        <input type="text" id="course" name="course"><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+        <button type="submit">Submit</button>
+        <button onclick="window.location.href='index.html'">Cancel</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Retrieve JSON data
+            $.getJSON("../data/student_data.json", function (data) {
+                // Populate form with existing student information
+                $("#name").val(data.name);
+                $("#id").val(data.id);
+                $("#age").val(data.age);
+                $("#education").val(data.education);
+                $("#program").val(data.program);
+                $("#faculty").val(data.faculty);
+                $("#status").val(data.status);
+                $("#gender").val(data.gender);
+                $("#class").val(data.class);
+                $("#course").val(data.course);
+                $("#email").val(data.email);
+                $("#major").val(data.major);
+            });
+
+            // Handle form submission
+            $("form").submit(function (event) {
+                event.preventDefault();
+
+                // Get form values
+                var hoVaTen = $("#name").val();
+                var maSoSinhVien = $("#id").val();
+                var namVaoTruong = $("#age").val();
+                var bacDaoTao = $("#education").val();
+                var chuongTrinh = $("#program").val();
+                var khoaVien = $("#faculty").val();
+                var tinhTrangHocTap = $("#status").val();
+                var gioiTinh = $("#gender").val();
+                var lop = $("#class").val();
+                var khoaHoc = $("#course").val();
+                var email = $("#email").val();
+                var major = $("#major").val();
+
+                // Update JSON data
+                var newData = {
+                    "name": hoVaTen,
+                    "id": maSoSinhVien,
+                    "age": namVaoTruong,
+                    "education": bacDaoTao,
+                    "program": chuongTrinh,
+                    "faculty": khoaVien,
+                    "status": tinhTrangHocTap,
+                    "gender": gioiTinh,
+                    "class": lop,
+                    "course": khoaHoc,
+                    "email": email,
+                    "major": major
+                };
+
+                // Write updated JSON data to file
+                $.ajax({
+                    url: "http://localhost:3001/update-student",
+                    type: "POST",
+                    contentType: "application/json", 
+                    data: JSON.stringify(newData),
+                    success: function () {
+                        window.location.href = 'index.html';
+                    },
+                    error: function () {
+                        alert("Không thể cập nhật thông tin sinh viên.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

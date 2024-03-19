@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Tahoma', 'Geneva', 'sans-serif';
+}
+
+/* Header */
+.header-top {
+    height: 110px;
+    border-top: 10px solid #c40a0c;
+}
+
+.header-second {
+    height: 10px;
+    background-image: linear-gradient(#fff, #c40a0c);
+}
+
+.logo-ctdt {
+    margin-top: 10px;
+    margin-left: 160px;
+    background-image: url(/assets/images/logo-cttdt.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 90px;
+    width: 940px;
+}
+
+.folder-icon {
+    width: 18px;
+    height: 18px;
+    background-position: -504px -126px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    background-color: #e7e9ed;
+    height: 32px;
+    align-items: center;
+    box-shadow: 0 2px 0px #f2dede;
+}
+
+.nav-bar table {
+    width: 100%;
+    cursor: pointer;
+}
+
+.nav-bar tr td {
+    display: inline-flex;
+    justify-content: center;
+    width: 25%;
+    position: relative;
+}
+
+.nav-bar td .drop-down-icon{
+    position: relative;
+    width: 13px;
+    height: 13px;
+    top: 20%;
+    right: 0;
+    position: absolute;
+}
+
+/* End Header */
+.home-box {
+    height: 40px;
+}
+
+.home {
+    padding: 0 5px;
+    border-left: 3px solid #9f224e;
+    font-size: 14px;
+    color: #9f224e;
+    text-decoration: none;
+    height: 25px;
+    background-color: #eceeed;
+    display: inline-block;
+    line-height: 25px;
+    margin-top: 4px;
+}
+
+.home:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+.main {
+    display: flex;
+    margin-top: 8px;
+}
+
+.side-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu {
+    background-color: #f2f1eb;
+    padding: 10px;
+}
+
+.content {
+    flex: 4;
+}
+
+.side-menu .menu-header {
+    margin: 5px 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.side-menu .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url(/assets/images/avatar.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+}
+
+.side-menu .name {
+    font-weight: bold;
+}
+
+.sub-menu {
+    margin-bottom: 16px;
+}
+
+.sub-menu .noti::after {
+    content: "0";
+    color: white;
+    background-color: #8c1515;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.sub-menu .submenu-item {
+    display: flex;
+    margin-left: 10px;
+    border-bottom: 1px solid #b0b0b0;
+    list-style: none;
+    height: 37px;
+    line-height: 37px;
+    align-items: center;
+    padding: 5px 7px;
+}
+
+.sub-menu .ul {
+    padding-bottom: 8px;
+}
+
+.sub-menu .submenu-item:hover {
+    background-color: #ebebeb;
+    cursor: pointer;
+}
+
+.sub-menu .submenu-item:hover span{
+    color: #8c1515;
+}
+
+.sub-menu .submenu-item span {
+    color: #337ab7;
+    font-size: 13px;
+}
+
+/* Content */
+.personal-info {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #8c1515;
+}
+
+.line-info {
+    height: 1px;
+    margin: 20px 20px 35px;
+    background-color: #eee;
+}
+
+.line-separate {
+    width: 80%;
+    border: 3px solid rgb(255, 153, 0);
+    margin: 20px 0;
+}
+
+.image-frame {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #dbdbdb;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 10px 10px 10px rgb(154, 154, 154);
+}
+
+.image-mssv {
+    margin: 0 40px;
+    text-align: center;
+}
+
+.mssv {
+    margin-top: 8px;
+}
+.student-image {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+    background-image: url(/assets/images/avatar.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.student-info_first {
+    display: flex;
+}
+
+.special-text {
+    padding-right: 40px;
+}
+
+.info-title {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 16px;
+    padding: 8px ;
+}
+
+.info-content {
+    font-family:'Segoe UI', sans-serif;
+    line-height: 2;
+}
+
+.info-title .info-content {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.note {
+    margin-top: 30px;
+}
+
+.student-info_title {
+    align-items: center;
+    display: flex;
+}
+
+.edit-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+    margin-top: -4px;
+}
+
+/* footer */
+
+.footer {
+    margin-top: 16px;
+    position: relative;
+}
+.footer-image {
+    background-image: url(/assets/images/footer.jpg);
+    height: 100px;
+    background-position: center;
+}
+
+.footer-right {
+    width: 35%;
+    position: absolute;
+    top: 6px;
+    right: 80px;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+.footer-right hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #fff;
+}
+
+.footer-right b {
+    float: right;
+    margin-top: 8px;
+}
+
+.footer-right p {
+    float: right;
+}
+
+/* common */
+.text-primary-color {
+    color: #8c1515
+}
+
+.grid {
+    display: flex;
+    flex: 1;
+}
+
+.grid-col-2 div{
+    flex: 1
+}
+
+.title-time {
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: red
+}
+
+.main-part {
+    margin-top: 14px;
+}
