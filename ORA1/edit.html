@@ -42,7 +42,7 @@
     <script>
         $(document).ready(function () {
             // Retrieve JSON data
-            $.getJSON("../data/student_data.json", function (data) {
+            $.getJSON("./data/student_data.json", function (data) {
                 // Populate form with existing student information
                 $("#name").val(data.name);
                 $("#id").val(data.id);

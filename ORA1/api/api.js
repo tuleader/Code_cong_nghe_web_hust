@@ -6,9 +6,9 @@ app.use(express.json());
 app.use(cors()); // Use the cors middleware
 app.post('/update-student', (req, res) => {
     const newData = req.body;
-    console.log(newData);
+    // console.log(newData);
     // Đọc dữ liệu hiện tại từ tập tin student_data.json
-    fs.readFile('../data/student_data.json', 'utf8', (err, data) => {
+    fs.readFile('./data/student_data.json', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             return res.status(500).send('Server error');
@@ -27,7 +27,7 @@ app.post('/update-student', (req, res) => {
         Object.assign(jsonData, newData);
 
         // Ghi dữ liệu mới vào tập tin student_data.json
-        fs.writeFile('../data/student_data.json', JSON.stringify(jsonData), (writeErr) => {
+        fs.writeFile('./data/student_data.json', JSON.stringify(jsonData), (writeErr) => {
             if (writeErr) {
                 console.error(writeErr);
                 return res.status(500).send('Server error');

@@ -1,7 +1,7 @@
 // Đảm bảo rằng tài liệu đã được tải trước khi thực hiện các thao tác
 document.addEventListener("DOMContentLoaded", function() {
     // Sử dụng Fetch API để tải dữ liệu từ JSON
-    fetch('../data/student_data.json')
+    fetch('./data/student_data.json')
         .then(response => response.json()) // Chuyển đổi phản hồi sang JSON
         .then(data => {
             // console.log(data.age);
