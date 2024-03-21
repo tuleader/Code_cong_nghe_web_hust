@@ -1,5 +1,5 @@
 link github: https://github.com/tuleader/Code_cong_nghe_web_hust
 # Hướng dẫn chạy ORA1
 - npm i
-- node api/api.js (bước này chạy cổng nhận api edit thông tin)
+- node ./api/api.js (bước này chạy cổng nhận api edit thông tin)
 - dùng vscode chạy golive
